@@ -8,10 +8,9 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+@import "font";
 @import "colors";
 @import "typography";
-
-
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -24,14 +23,3 @@ $snb-es-designsystem-theme: (
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($snb-es-designsystem-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}

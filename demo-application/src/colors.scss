@@ -1,0 +1,166 @@
+@use '~@angular/material' as mat;
+@use 'sass:map';
+
+/* Primary */
+$snb-es-designsystem-primary-color-5pct: #E4F4F9;
+$snb-es-designsystem-primary-color-10pct: #BDE3F0;
+$snb-es-designsystem-primary-color-20pct: #97D1E5;
+$snb-es-designsystem-primary-color-30pct: #7BBFDA;
+$snb-es-designsystem-primary-color-40pct: #6DB1D2;
+$snb-es-designsystem-primary-color-50pct: #65A5CA;
+$snb-es-designsystem-primary-color-60pct: #5D97BC;
+$snb-es-designsystem-primary-color-70pct: #5385A9;
+$snb-es-designsystem-primary-color-80pct: #4C7494;
+$snb-es-designsystem-primary-color-90pct: #3E5570;
+$snb-es-designsystem-primary-color: $snb-es-designsystem-primary-color-90pct;
+
+$snb-es-designsystem-primary-high-contrast-color: #FFFFFF;
+$snb-es-designsystem-primary-medium-contrast-color: #CDD3DA;
+$snb-es-designsystem-primary-low-contrast-color: #8796A6;
+
+/* Secondary */
+$snb-es-designsystem-secondary-color-5pct: #CEF4FF;
+$snb-es-designsystem-secondary-color-10pct: #ABDEF3;
+$snb-es-designsystem-secondary-color-20pct: #8CC4DD;
+$snb-es-designsystem-secondary-color-30pct: #69A9C5;
+$snb-es-designsystem-secondary-color-40pct: #4D95B3;
+$snb-es-designsystem-secondary-color-50pct: #2A82A1;
+$snb-es-designsystem-secondary-color-60pct: #197390;
+$snb-es-designsystem-secondary-color-70pct: #005F79;
+$snb-es-designsystem-secondary-color-80pct: #004B63;
+$snb-es-designsystem-secondary-color-90pct: #00364B;
+$snb-es-designsystem-secondary-color: $snb-es-designsystem-secondary-color-70pct;
+
+/* Background */
+$snb-es-designsystem-background-color: #FFFFFF;
+$snb-es-designsystem-surface-color: #FFFFFF;
+
+$snb-es-designsystem-surface-high-contrast-color: #000000;
+$snb-es-designsystem-surface-medium-contrast-color: #435363;
+$snb-es-designsystem-surface-low-contrast-color: #9E9E9E;
+
+/* Others */
+$snb-es-designsystem-error-color: #E84133;
+$snb-es-designsystem-border-color: #E6E6E6;
+
+
+/* Palettes */
+$snb-es-designsystem-primary-palette: (
+  50: $snb-es-designsystem-primary-color-5pct,
+  100: $snb-es-designsystem-primary-color-10pct,
+  200: $snb-es-designsystem-primary-color-20pct,
+  300: $snb-es-designsystem-primary-color-30pct,
+  400: $snb-es-designsystem-primary-color-40pct,
+  500: $snb-es-designsystem-primary-color-50pct,
+  600: $snb-es-designsystem-primary-color-60pct,
+  700: $snb-es-designsystem-primary-color-70pct,
+  800: $snb-es-designsystem-primary-color-80pct,
+  900: $snb-es-designsystem-primary-color-90pct,
+  contrast: (
+    50: $snb-es-designsystem-surface-high-contrast-color,
+    100: $snb-es-designsystem-surface-high-contrast-color,
+    200: $snb-es-designsystem-surface-high-contrast-color,
+    300: $snb-es-designsystem-surface-high-contrast-color,
+    400: $snb-es-designsystem-surface-high-contrast-color,
+    500: $snb-es-designsystem-primary-high-contrast-color,
+    600: $snb-es-designsystem-primary-high-contrast-color,
+    700: $snb-es-designsystem-primary-high-contrast-color,
+    800: $snb-es-designsystem-primary-high-contrast-color,
+    900: $snb-es-designsystem-primary-high-contrast-color,
+  )
+);
+
+$snb-es-designsystem-secondary-palette: (
+  50: #cef4ff,
+  100: #abdef3,
+  200: #8cc4dd,
+  300: #69a9c5,
+  400: #4d95b3,
+  500: #2a82a1,
+  600: #197390,
+  700: #005f79,
+  800: #004b63,
+  900: #00364b,
+  contrast: (
+    50: $snb-es-designsystem-surface-high-contrast-color,
+    100: $snb-es-designsystem-surface-high-contrast-color,
+    200: $snb-es-designsystem-surface-high-contrast-color,
+    300: $snb-es-designsystem-surface-high-contrast-color,
+    400: $snb-es-designsystem-surface-high-contrast-color,
+    500: $snb-es-designsystem-primary-high-contrast-color,
+    600: $snb-es-designsystem-primary-high-contrast-color,
+    700: $snb-es-designsystem-primary-high-contrast-color,
+    800: $snb-es-designsystem-primary-high-contrast-color,
+    900: $snb-es-designsystem-primary-high-contrast-color,
+  )
+);
+
+$snb-es-designsystem-error-palette: (
+  50: #fdeaed,
+  100: #fbccd0,
+  200: #e99897,
+  300: #dc7170,
+  400: #e5524d,
+  500: #e84133,
+  600: #d93932,
+  700: #c82f2c,
+  800: #bb2925,
+  900: #ab1f1a,
+  contrast: (
+    50: $snb-es-designsystem-surface-high-contrast-color,
+    100: $snb-es-designsystem-surface-high-contrast-color,
+    200: $snb-es-designsystem-surface-high-contrast-color,
+    300: $snb-es-designsystem-surface-high-contrast-color,
+    400: $snb-es-designsystem-surface-high-contrast-color,
+    500: $snb-es-designsystem-surface-high-contrast-color,
+    600: $snb-es-designsystem-surface-high-contrast-color,
+    700: $snb-es-designsystem-surface-high-contrast-color,
+    800: $snb-es-designsystem-primary-high-contrast-color,
+    900: $snb-es-designsystem-primary-high-contrast-color,
+  )
+);
+
+$snb-es-designsystem-foreground-palette: (
+  base:              black,
+  divider:           rgba(black, 0.12),
+  dividers:          rgba(black, 0.12),
+  disabled:          rgba(black, 0.38),
+  disabled-button:   rgba(black, 0.26),
+  disabled-text:     rgba(black, 0.38),
+  elevation:         black,
+  hint-text:         rgba(black, 0.38),
+  secondary-text:    rgba(black, 0.54),
+  icon:              rgba(black, 0.54),
+  icons:             rgba(black, 0.54),
+  text:              rgba(black, 0.87),
+  slider-min:        rgba(black, 0.87),
+  slider-off:        rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
+);
+
+$snb-es-designsystem-background-palette: (
+  status-bar: #e0e0e0,
+  app-bar:    #f5f5f5,
+  background: #fafafa,
+  hover:      rgba(black, 0.04),
+  card:       white,
+  dialog:     white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: rgba(black, 0.12),
+  selected-button: #e0e0e0,
+  selected-disabled-button: #bdbdbd,
+  disabled-button-toggle: #eeeeee,
+  unselected-chip: #e0e0e0,
+  disabled-list-option: #eeeeee,
+  tooltip: #616161,
+);
+
+$snb-es-designsystem-color: (
+  primary: mat.define-palette($snb-es-designsystem-primary-palette, 900),
+  accent: mat.define-palette($snb-es-designsystem-secondary-palette, 700),
+  warn: mat.define-palette($snb-es-designsystem-error-palette, 500),
+  is-dark: false,
+  foreground: $snb-es-designsystem-foreground-palette,
+  background: $snb-es-designsystem-background-palette,
+)

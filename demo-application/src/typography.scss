@@ -1,0 +1,21 @@
+@use '~@angular/material' as mat;
+@use 'sass:map';
+
+$snb-es-designsystem-font-work-sans: "";
+$snb-es-designsystem-font-lato: "";
+
+$snb-es-designsystem-typography: (
+  headline-1: mat.define-typography-level(6rem, 7rem, 300, $snb-es-designsystem-font-work-sans, -0.09rem),
+  headline-2: mat.define-typography-level(3.75rem, 4.5rem, 300, $snb-es-designsystem-font-work-sans, -0.03rem),
+  headline-3: mat.define-typography-level(3rem, 3.5rem, 300, $snb-es-designsystem-font-work-sans, 0),
+  headline-4: mat.define-typography-level(2.125rem, 2.25rem, 400, $snb-es-designsystem-font-work-sans, 0),
+  headline-5: mat.define-typography-level(1.5rem, 1.5rem, 400, $snb-es-designsystem-font-work-sans, 0),
+  headline-6: mat.define-typography-level(1.25rem, 1.5rem, 500, $snb-es-designsystem-font-work-sans, 0.009375rem),
+  subtitle-1: mat.define-typography-level(1rem, 1.5rem, 400, $snb-es-designsystem-font-work-sans, 0.00875rem),
+  subtitle-2: mat.define-typography-level(0.875rem, 1.5rem, 400, $snb-es-designsystem-font-work-sans, 0.00625rem),
+  body-1: mat.define-typography-level(1rem, 1.5rem, 400, $snb-es-designsystem-font-lato, 0.03125rem),
+  body-2: mat.define-typography-level(0.875rem, 1.25rem, 400, $snb-es-designsystem-font-lato, 0.015625rem),
+  button: mat.define-typography-level(0.0875rem, 1rem, 500, $snb-es-designsystem-font-work-sans, 0.078125rem),
+  caption: mat.define-typography-level(0.75rem, 1rem, 400, $snb-es-designsystem-font-lato, 0.078125rem),
+  overline: mat.define-typography-level(0.625rem, 1rem, 500, $snb-es-designsystem-font-work-sans, 0.09375rem),
+);

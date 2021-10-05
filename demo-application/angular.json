@@ -47,7 +47,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/demo-code/*.*",
+                "input": "src/app/demo/",
+                "output": "/assets/demo-code"
+              }
             ],
             "styles": [
               "src/theme.scss",

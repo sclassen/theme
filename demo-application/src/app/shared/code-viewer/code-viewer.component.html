@@ -1,0 +1,9 @@
+<mat-accordion class="code-viewer">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
+      <mat-panel-title>Show {{extension | uppercase}}</mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <pre><code [highlight]="content" [languages]="[extension]"></code></pre>
+  </mat-expansion-panel>
+</mat-accordion>

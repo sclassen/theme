@@ -7,7 +7,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
-import {DemModule} from "./demo/demo.module";
+import {DemoModule} from "./demo/demo.module";
+import {SharedModule} from "./shared/shared.module";
+import {HIGHLIGHT_OPTIONS} from "ngx-highlightjs";
 
 @NgModule({
   declarations: [
@@ -16,13 +18,29 @@ import {DemModule} from "./demo/demo.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DemModule,
     BrowserAnimationsModule,
+
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+
+    SharedModule,
+    DemoModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          css: () => import('highlight.js/lib/languages/css'),
+          scss: () => import('highlight.js/lib/languages/scss'),
+          xml: () => import('highlight.js/lib/languages/xml')
+        }
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

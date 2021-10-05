@@ -1,18 +1,18 @@
 import {NgModule} from "@angular/core";
 import {DemoComponent} from "./demo.component";
 import {DemoRoutingModule} from "./demo-routing.module";
-import {ButtonDemoComponent} from "./button/button-demo.component";
 import {MatTabsModule} from "@angular/material/tabs";
+import {ButtonDemoModule} from "./button/button-demo.module";
 
 @NgModule({
   imports: [
     DemoRoutingModule,
-    MatTabsModule
+    MatTabsModule,
+    ButtonDemoModule,
   ],
   declarations: [
     DemoComponent,
-    ButtonDemoComponent
   ]
 })
-export class DemModule {
+export class DemoModule {
 }

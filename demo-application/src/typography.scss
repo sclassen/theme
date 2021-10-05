@@ -1,8 +1,8 @@
 @use '~@angular/material' as mat;
 @use 'sass:map';
 
-$snb-es-designsystem-font-work-sans: "";
-$snb-es-designsystem-font-lato: "";
+$snb-es-designsystem-font-work-sans: "Work Sans, sans-serif";
+$snb-es-designsystem-font-lato: "Lato, sans-serif";
 
 $snb-es-designsystem-typography: (
   headline-1: mat.define-typography-level(6rem, 7rem, 300, $snb-es-designsystem-font-work-sans, -0.09rem),
@@ -15,7 +15,7 @@ $snb-es-designsystem-typography: (
   subtitle-2: mat.define-typography-level(0.875rem, 1.5rem, 400, $snb-es-designsystem-font-work-sans, 0.00625rem),
   body-1: mat.define-typography-level(1rem, 1.5rem, 400, $snb-es-designsystem-font-lato, 0.03125rem),
   body-2: mat.define-typography-level(0.875rem, 1.25rem, 400, $snb-es-designsystem-font-lato, 0.015625rem),
-  button: mat.define-typography-level(0.0875rem, 1rem, 500, $snb-es-designsystem-font-work-sans, 0.078125rem),
+  button: mat.define-typography-level(0.875rem, 1rem, 500, $snb-es-designsystem-font-work-sans, 0.078125rem),
   caption: mat.define-typography-level(0.75rem, 1rem, 400, $snb-es-designsystem-font-lato, 0.078125rem),
   overline: mat.define-typography-level(0.625rem, 1rem, 500, $snb-es-designsystem-font-work-sans, 0.09375rem),
 );

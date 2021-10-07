@@ -55,7 +55,7 @@
               }
             ],
             "styles": [
-              "src/theme.scss",
+              "node_modules/@snb-eesot-designsystem/angular-theme/theme.scss",
               "src/styles.scss"
             ],
             "scripts": []

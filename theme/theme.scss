@@ -8,7 +8,7 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-@import "font";
+@import "fonts/font";
 @import "colors";
 @import "typography";
 
@@ -23,3 +23,5 @@ $snb-es-designsystem-theme: (
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($snb-es-designsystem-theme);
+
+@import "components/button";

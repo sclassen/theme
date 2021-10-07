@@ -1,0 +1,16 @@
+{
+  "name": "@snb-eesot-designsystem/angular-theme",
+  "version": "0.0.1",
+  "description": "theme for angular",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.karakun.com/repository/karakun-npm-internal/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/material": "~12.2.0"
+  }
+}

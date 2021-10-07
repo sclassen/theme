@@ -3,13 +3,14 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import {DemoModule} from "./demo/demo.module";
 import {SharedModule} from "./shared/shared.module";
 import {HIGHLIGHT_OPTIONS} from "ngx-highlightjs";
+import {MAT_RIPPLE_GLOBAL_OPTIONS} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import {HIGHLIGHT_OPTIONS} from "ngx-highlightjs";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    NoopAnimationsModule,
 
     MatToolbarModule,
     MatSidenavModule,
@@ -28,6 +29,7 @@ import {HIGHLIGHT_OPTIONS} from "ngx-highlightjs";
     DemoModule,
   ],
   providers: [
+    {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: {disabled: true}},
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
